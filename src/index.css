@@ -1,1 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Elsie+Swash+Caps&family=Quattrocento&display=swap");
+/* font-family: 'Amatic SC', cursive;
+font-family: 'Elsie Swash Caps', cursive;
+font-family: 'Quattrocento', serif; */
 
+/**************-------------- ROOT --------------**************/
+body {
+  background: radial-gradient(rgba(222, 43, 43, 0.797), rgba(83, 58, 114, 0.45)),
+    url("./images/background3.png");
+  font-family: "Elsie Swash Caps", cursive;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(35, 0, 92);
+  background-position: center;
+}
+/**************-------------- WELCOME PAGE --------------**************/
+#welcome_pg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  background-image: url("./images/scroll.png");
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  background-size: cover;
+  height: 40rem;
+  padding: 8rem;
+  background-position: center;
+}
+#welcome_txt {
+  padding: 5rem;
+  text-shadow: 0 0 3px #9900ffdd;
+}
+#welcome_txt h1 {
+  /* font-family: "Amatic SC", cursive; */
+  text-shadow: 0 0 13px #ff0000;
+  font-size: 4rem;
+}
