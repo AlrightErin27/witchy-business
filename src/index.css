@@ -12,7 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: rgb(35, 0, 92);
+  color: rgb(255, 255, 255);
   background-position: center;
 }
 /**************-------------- WELCOME PAGE --------------**************/
@@ -25,16 +25,40 @@ body {
   background-repeat: no-repeat;
   background-attachment: relative;
   background-size: cover;
-  height: 40rem;
-  padding: 8rem;
+  height: 57rem;
+  padding: 4rem;
   background-position: center;
 }
 #welcome_txt {
-  padding: 5rem;
-  text-shadow: 0 0 3px #9900ffdd;
+  padding: 4rem;
+  text-shadow: 0 0 3px #4e0082;
 }
 #welcome_txt h1 {
-  /* font-family: "Amatic SC", cursive; */
-  text-shadow: 0 0 13px #ff0000;
-  font-size: 4rem;
+  text-shadow: 0 0 3px #3f0000;
+  font-size: 3.8rem;
+}
+#entry-container {
+  color: rgba(0, 0, 0, 0.479);
+  text-shadow: 0 0 3px #ffffff;
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
+  font-size: 2.8rem;
+  height: 180px;
+}
+#door-container {
+  border-radius: 90%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(51, 0, 255, 0.848) 0%,
+    rgba(255, 255, 255, 0) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.door {
+  height: 18rem;
+  position: fixed center;
+}
+.door:hover {
+  cursor: grab;
+  height: 18.5rem;
 }
