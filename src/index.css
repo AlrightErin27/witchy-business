@@ -65,6 +65,7 @@ body {
 }
 /**************-------------- LAB PAGE --------------**************/
 .lab-container {
-  background-size: cover;
   height: 100rem;
+  width: 100rem;
+  outline: white solid 3px;
 }
