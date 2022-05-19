@@ -1,21 +1,24 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, NavLink, useHistory } from "react-router-dom";
 import door from "../images/door.png";
 import open_door from "../images/door.gif";
 
 function Welcome() {
+  //STATE
+  const history = useHistory();
   const [knocks, setKnocks] = useState(1);
 
+  //Sets knocks state depending on how many times door is clicked
   function handleKnocks() {
     if (knocks < 3) {
       setKnocks(knocks + 1);
-      //   console.log("🚪", knocks);
     } else {
       setKnocks(1);
       console.log("🚪", "enter...", `Knocks: ${knocks}`);
+      history.push("/Laboratory");
     }
   }
-
+  console.log("KNOCKS", knocks);
   return (
     <div id="welcome_pg">
       <div id="welcome_txt">
@@ -40,13 +43,13 @@ function Welcome() {
             {knocks === 1 ? (
               <img src={door} alt="door" className="door" />
             ) : knocks === 2 ? (
-              <img src={door} alt="door" className="door" />
-            ) : (
               <Router>
-                <Link to="/laboratory">
+                <NavLink to="/Laboratory">
                   <img src={open_door} alt="open-door" className="door" />
-                </Link>
+                </NavLink>
               </Router>
+            ) : (
+              <img src={open_door} alt="open-door" className="door" />
             )}
             {/* ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ */}
           </div>
