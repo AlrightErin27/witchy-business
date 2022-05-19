@@ -40,16 +40,16 @@ function Welcome() {
           <p>Knock thrice to enter . . .</p>
           <div id="door-container" onClick={handleKnocks}>
             {/* ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ */}
-            {knocks === 1 ? (
+            {knocks <= 2 ? (
               <img src={door} alt="door" className="door" />
-            ) : knocks === 2 ? (
+            ) : knocks === 3 ? (
               <Router>
                 <NavLink to="/Laboratory">
                   <img src={open_door} alt="open-door" className="door" />
                 </NavLink>
               </Router>
             ) : (
-              <img src={open_door} alt="open-door" className="door" />
+              <></>
             )}
             {/* ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ ✊ */}
           </div>
