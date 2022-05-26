@@ -72,33 +72,24 @@ body {
   align-items: center;
 }
 .lab-container h1 {
-  padding: 1rem;
+  padding: 0.4rem;
 }
 .ingredients-container {
+  z-index: 999999;
   height: 30vh;
   width: 90vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   column-gap: 0.3rem;
-  row-gap: -90rem;
-}
-.cauldron-container {
-  height: 50rem;
-  width: 40rem;
-  background-image: url("./images/cauldron.png");
-  background-repeat: no-repeat;
-  background-attachment: relative;
-  background-size: cover;
 }
 .item-container {
-  /* width: 17vw; */
   color: transparent;
   display: flex;
   flex-direction: column;
 }
 .item {
-  height: 12vh;
+  height: 13vh;
 }
 .item:hover {
   background: radial-gradient(
@@ -112,5 +103,40 @@ body {
 }
 .item-container:hover {
   color: white;
-  z-index: 999999;
+}
+.lower-pg {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  padding: 14rem;
+}
+.cauldron-container {
+  height: 50rem;
+  width: 50rem;
+  background-image: url("./images/cauldron.png");
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  background-size: cover;
+  /* outline: solid rgb(109, 252, 0) 2px; */
+}
+.spell-container {
+  height: 50rem;
+  width: 60rem;
+
+  background-image: url("./images/scroll.png");
+  background-position: center top;
+
+  background-size: 60vw;
+  background-repeat: no-repeat;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

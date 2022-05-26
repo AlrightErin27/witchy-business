@@ -56,7 +56,10 @@ function Laboratory() {
           <h4 className="desc">Snow Berries</h4>
         </div>
       </div>
-      <div className="cauldron-container"></div>
+      <div className="lower-pg">
+        <div className="cauldron-container"></div>
+        <div className="spell-container"></div>
+      </div>
     </div>
   );
 }
