@@ -72,30 +72,45 @@ body {
   align-items: center;
 }
 .lab-container h1 {
-  padding: 3rem;
+  padding: 1rem;
 }
 .ingredients-container {
-  height: 25vh;
+  height: 30vh;
   width: 90vw;
-  outline: 1px white solid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 0.3rem;
+  row-gap: -90rem;
 }
 .cauldron-container {
-  height: 40rem;
+  height: 50rem;
   width: 40rem;
   background-image: url("./images/cauldron.png");
   background-repeat: no-repeat;
   background-attachment: relative;
   background-size: cover;
 }
+.item-container {
+  /* width: 17vw; */
+  color: transparent;
+  display: flex;
+  flex-direction: column;
+}
 .item {
-  height: 20vh;
+  height: 12vh;
 }
 .item:hover {
-  border-radius: 90%;
   background: radial-gradient(
     ellipse at center,
     rgba(51, 0, 255, 0.848) 0%,
     rgba(255, 255, 255, 0) 70%,
     rgba(255, 255, 255, 0) 100%
   );
+  cursor: grab;
+  color: white;
+}
+.item-container:hover {
+  color: white;
+  z-index: 999999;
 }
