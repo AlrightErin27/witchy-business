@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Welcome from "./components/Welcome";
 import Laboratory from "./components/Laboratory";
+import SpellBook from "./components/SpellBook";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           </Route>
           <Route exact path="/Laboratory">
             <Laboratory />
+          </Route>
+          <Route exact path="/SpellBook">
+            <SpellBook />
           </Route>
           <Redirect to="/welcome"></Redirect>
         </Switch>

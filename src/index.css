@@ -120,23 +120,74 @@ body {
   /* outline: solid rgb(109, 252, 0) 2px; */
 }
 .spell-container {
-  height: 50rem;
+  height: 33rem;
   width: 60rem;
-
   background-image: url("./images/scroll.png");
   background-position: center top;
-
-  background-size: 60vw;
+  background-size: 66vw;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* outline: yellow 2px solid; */
 }
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+/**************-------------- SPELL FORM  PAGE --------------**************/
+.item-f {
+  margin: 1.5rem;
+  margin: 3rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.item-f label {
+  color: var(white);
+  border-radius: 1em;
+  outline: none;
+  font-size: 2rem;
+}
+.item-f input {
+  width: 12rem;
+  font-size: 1.8rem;
+  cursor: text;
+  --glow-color: rgba(252, 248, 241, 0.598);
+  --glow-spread-color: rgba(191, 123, 255, 0.115);
+  --btn-color: rgba(220, 171, 193, 0.022);
+  color: var(black);
+  border: 0.00001em transparent var(--glow-color);
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  font-family: "Elsie Swash Caps", cursive;
+}
+#f-desc {
+  width: 45rem;
+}
+#f-submit {
+  cursor: pointer;
+  --glow-color: rgba(255, 227, 176, 0.633);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --btn-color: rgb(136, 61, 95);
+  border: 0.00001em transparent var(--glow-color);
+  padding: 0.4rem;
+  margin: 0.9rem;
+  color: white;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  text-shadow: 0 0 0.5em var(--glow-color);
+  transition: all 0.3s;
+  font-family: "Elsie Swash Caps", cursive;
+  font-size: 2rem;
+}
+#f-submit:hover {
+  margin: 3rem 0 0 0;
+  background-color: var(--glow-spread-color);
+  filter: blur(0.1em);
 }

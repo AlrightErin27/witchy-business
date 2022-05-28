@@ -1,4 +1,5 @@
 import React from "react";
+import SpellForm from "./SpellForm";
 import egg from "../images/ingredients/crystalegg.png";
 import bat from "../images/ingredients/bat.png";
 import berry from "../images/ingredients/chokeberry.png";
@@ -58,7 +59,9 @@ function Laboratory() {
       </div>
       <div className="lower-pg">
         <div className="cauldron-container"></div>
-        <div className="spell-container"></div>
+        <div className="spell-container">
+          <SpellForm />
+        </div>
       </div>
     </div>
   );
