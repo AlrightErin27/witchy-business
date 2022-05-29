@@ -14,7 +14,7 @@ function SpellForm() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div className="item-f">
+        <div className="item-f" id="spell-title-f">
           <label>Spell Title</label>
           <>
             <input type="text" onChange={handleTitle} />

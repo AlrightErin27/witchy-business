@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, NavLink, useHistory } from "react-router-dom";
 import SpellForm from "./SpellForm";
 import egg from "../images/ingredients/crystalegg.png";
 import bat from "../images/ingredients/bat.png";
@@ -12,9 +13,23 @@ import ivy from "../images/ingredients/poisonivy.png";
 import sage from "../images/ingredients/sage.png";
 
 function Laboratory() {
+  const history = useHistory();
+  function handleClick() {
+    history.push("/SpellBook");
+  }
+
   return (
     <div className="lab-container">
       <h1>Laboratory</h1>
+
+      <Router>
+        <NavLink to="/SpellBook">
+          <button className="button" onClick={handleClick}>
+            To Spell Book
+          </button>
+        </NavLink>
+      </Router>
+
       <div className="ingredients-container">
         <div className="item-container">
           <img src={egg} alt="crystal egg" className="item" />
@@ -58,7 +73,9 @@ function Laboratory() {
         </div>
       </div>
       <div className="lower-pg">
-        <div className="cauldron-container"></div>
+        <div className="cauldron-container">
+          <div id="drag-into"></div>
+        </div>
         <div className="spell-container">
           <SpellForm />
         </div>

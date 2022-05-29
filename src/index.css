@@ -70,9 +70,34 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0rem;
 }
 .lab-container h1 {
   padding: 0.4rem;
+}
+.button {
+  outline: none;
+  cursor: pointer;
+  --glow-color: rgba(255, 227, 176, 0.633);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --btn-color: rgb(136, 61, 95);
+  border: 0.00001em transparent var(--glow-color);
+  padding: 0.1rem;
+  color: white;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  text-shadow: 0 0 0.5em var(--glow-color);
+  transition: all 0.3s;
+  font-family: "Elsie Swash Caps", cursive;
+  width: 15rem;
+  font-size: 1.3rem;
+}
+.button:hover {
+  background-color: var(--glow-spread-color);
+  filter: blur(0.1em);
 }
 .ingredients-container {
   z-index: 999999;
@@ -82,6 +107,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   column-gap: 0.3rem;
+  margin: 2rem 0 0 0;
 }
 .item-container {
   color: transparent;
@@ -89,7 +115,7 @@ body {
   flex-direction: column;
 }
 .item {
-  height: 13vh;
+  height: 12.3vh;
 }
 .item:hover {
   background: radial-gradient(
@@ -108,16 +134,7 @@ body {
   display: flex;
   flex-direction: row;
   position: absolute;
-  padding: 14rem;
-}
-.cauldron-container {
-  height: 50rem;
-  width: 50rem;
-  background-image: url("./images/cauldron.png");
-  background-repeat: no-repeat;
-  background-attachment: relative;
-  background-size: cover;
-  /* outline: solid rgb(109, 252, 0) 2px; */
+  margin: 14rem;
 }
 .spell-container {
   height: 33rem;
@@ -129,16 +146,44 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* outline: yellow 2px solid; */
+  margin: 2rem 0 0 0;
+}
+/**************-------------- CAULDRON --------------**************/
+.cauldron-container {
+  height: 50rem;
+  width: 50rem;
+  background-image: url("./images/cauldron.png");
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#drag-into {
+  height: 36rem;
+  width: 40rem;
+  background-color: #3f000000;
+  border-radius: 60%;
+}
+#drag-into:hover {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(51, 0, 255, 0.848) 0%,
+    rgba(255, 255, 255, 0) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 /**************-------------- SPELL FORM  PAGE --------------**************/
 .item-f {
   margin: 1.5rem;
-  margin: 3rem 0 0 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+#spell-title-f {
+  margin: 4rem 0 0 0;
 }
 .item-f label {
   color: var(white);
@@ -147,16 +192,16 @@ body {
   font-size: 2rem;
 }
 .item-f input {
-  width: 12rem;
+  width: 18rem;
   font-size: 1.8rem;
   cursor: text;
-  --glow-color: rgba(252, 248, 241, 0.598);
+  --glow-color: rgba(252, 248, 241, 0.407);
   --glow-spread-color: rgba(191, 123, 255, 0.115);
   --btn-color: rgba(220, 171, 193, 0.022);
   color: var(black);
+  background-color: var(--glow-color);
   border: 0.00001em transparent var(--glow-color);
-  background-color: var(--btn-color);
-  border-radius: 1em;
+  border-radius: 0.5em;
   outline: none;
   box-shadow: 0 0 1em 0.25em var(--glow-color),
     0 0 4em 1em var(--glow-spread-color),
@@ -187,7 +232,18 @@ body {
   font-size: 2rem;
 }
 #f-submit:hover {
-  margin: 3rem 0 0 0;
   background-color: var(--glow-spread-color);
   filter: blur(0.1em);
+}
+/**************-------------- SPELL BOOK --------------**************/
+.spell-book-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0rem;
+}
+.spell-book-container h1 {
+  padding: 0.4rem;
 }
